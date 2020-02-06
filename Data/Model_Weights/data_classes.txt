@@ -1,0 +1,17 @@
+yield
+keepRight
+noLeftTurn
+speedLimitUrdbl
+speedLimit25
+stopAhead
+stop
+merge
+speedLimit65
+truckSpeedLimit55
+rampSpeedAdvisory45
+signalAhead
+noRightTurn
+speedLimit50
+pedestrianCrossing
+speedLimit35
+dip
