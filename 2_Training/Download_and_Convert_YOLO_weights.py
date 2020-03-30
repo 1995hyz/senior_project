@@ -9,7 +9,7 @@ import progressbar
 FLAGS = None
 
 root_folder = os.path.dirname(os.path.abspath(__file__))
-download_folder = os.path.join(root_folder,'2_Training\\src','keras_yolo3')
+download_folder = root_folder # os.path.join(root_folder,'2_Training\\src','keras_yolo3')
 
 if __name__ == '__main__':
     # Delete all default flags

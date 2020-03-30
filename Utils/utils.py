@@ -28,6 +28,7 @@ def detect_object(yolo, img_path, save_img, save_img_path='./', postfix=''):
       prediction: list of bounding boxes in format (xmin,ymin,xmax,ymax,class_id,confidence)
       image: unaltered input image as (H,W,C) array
     """
+    start = timer()
     try:
         image = Image.open(img_path)
         if image.mode != "RGB":
@@ -36,12 +37,17 @@ def detect_object(yolo, img_path, save_img, save_img_path='./', postfix=''):
     except:
         print('File Open Error! Try again!')
         return None, None
+    end=timer()
+    print("******" + str(end - start) + "******")
+    start = timer()
 
     prediction, new_image = yolo.detect_image(image)
 
     img_out = postfix.join(os.path.splitext(os.path.basename(img_path)))
     if save_img:
         new_image.save(os.path.join(save_img_path, img_out))
+    end = timer()
+    print("*********" + str(end-start) + "*********")
 
     return prediction, image_array
 

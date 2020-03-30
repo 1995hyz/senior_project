@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     # This step makes sure that the path names correspond to the local machine
     # This is important if annotation and training are done on different machines (e.g. training on AWS)
-    lines  = ChangeToOtherMachine(lines,remote_machine = '')
+    # lines  = ChangeToOtherMachine(lines,remote_machine = '')
     np.random.shuffle(lines)
     num_val = int(len(lines)*val_split)
     num_train = len(lines) - num_val
